@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:f="http://java.sun.com/jsf/core">
+
+  <f:view>
+    <f:metadata>
+      <!-- Start working on a task. Task Id is read internally from
+       request parameters and cached in the CDI conversation scope.
+      -->
+
+    <f:event type="preRenderView" listener="#{camundaTaskForm.startTaskForm()}" />
+  </f:metadata>
+  <h:head>
+    <title>Photoshoot Done</title>
+  </h:head>
+  <h:body>
+    <h1>Booking:</h1>
+    <p>Customer: #{photoshootController.bookingEntity.customer}</p>
+    <p>Address: #{photoshootController.bookingEntity.address}</p>
+    <p>Date: #{photoshootController.bookingEntity.date}</p>
+    <h:form id="submitForm">
+      <h:outputLabel>Photosoot Done?</h:outputLabel>
+      <h:selectBooleanCheckbox value="#{photoshootController.bookingEntity.photoshootDone}"/><br/>
+      <h:commandButton id="submit_button" value="Photoshoot Done" action="#{photoshootController.submitForm()}" />
+    </h:form>
+  </h:body>
+  </f:view>
+</html>
