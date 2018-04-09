@@ -1,5 +1,7 @@
 /target/
 .classpath
+.project
 .settings/
 .tern-project
 .metadata
+deploy.sh
