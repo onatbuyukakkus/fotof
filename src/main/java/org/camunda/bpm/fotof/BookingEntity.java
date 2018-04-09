@@ -23,7 +23,9 @@ public class BookingEntity implements Serializable {
   protected String date;
   protected boolean photoshootDone;
   protected boolean inStudio;
-  protected boolean orderRecieved;
+  
+  protected String photoIDs;
+  protected String comment;
 
   public Long getId() {
     return id;
@@ -81,11 +83,19 @@ public class BookingEntity implements Serializable {
     this.inStudio = inStudio;
   }
   
-  public boolean isOrderRecieved() {
-	    return orderRecieved;
+  public String getPhotoIDs() {
+    return photoIDs;
+  }
+
+  public void setPhotoIDs(String photoIDs) {
+    this.photoIDs = photoIDs;
   }
   
-  public void setOrderRecieved(boolean orderRecieved) {
-	  this.orderRecieved = orderRecieved;
+  public String getComment() {
+    return comment;
+  }
+
+  public void setComment(String comment) {
+    this.comment = comment;
   }
 }

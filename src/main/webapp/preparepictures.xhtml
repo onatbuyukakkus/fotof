@@ -13,10 +13,11 @@
     <f:event type="preRenderView" listener="#{camundaTaskForm.startTaskForm()}" />
   </f:metadata>
   <h:head>
-    <title>Receive Payment</title>
+    <title>Prepare pictures</title>
   </h:head>
   <h:body>
-  	<h1>Payment received</h1>
+  	<p>Photo ID numbers: #{bookingController.bookingEntity.photoIDs}</p>
+    <p>Additional comments and requests: #{bookingController.bookingEntity.comment}</p>
     <h:form id="submitForm">
       <h:commandButton id="submit_button" value="Done" action="#{camundaTaskForm.completeTask()}" />
     </h:form>

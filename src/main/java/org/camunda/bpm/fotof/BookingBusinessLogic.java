@@ -76,12 +76,12 @@ public class BookingBusinessLogic {
   
   public void rejectBooking(DelegateExecution delegateExecution) {
 	  BookingEntity booking = getBooking((Long) delegateExecution.getVariable("bookingId"));
-	  LOGGER.log(Level.INFO, "\n\n\nSending Email:\nDear {0}, you haven't showed up for photoshoot at {1} and {2}.\n\n\n", new String[]{booking.getCustomer(), booking.getAddress(), booking.getDate()});
+	  LOGGER.log(Level.INFO, "\n\n\nSending Email:\nDear " + booking.getCustomer() + ", you haven't showed up for photoshoot at " + booking.getAddress() + " and " + booking.getDate() + ".\n\n\n");
   }
   
   public void galleryReady(DelegateExecution delegateExecution) {
 	  BookingEntity booking = getBooking((Long) delegateExecution.getVariable("bookingId"));
-	  LOGGER.log(Level.INFO, "\n\n\nSending Email:\nDear {0}, your gallery for photoshoot at {1} and {2} is ready.\n\n\n", new String[]{booking.getCustomer(), booking.getAddress(), booking.getDate()});
+	  LOGGER.log(Level.INFO, "\n\n\nSending Email:\nDear " + booking.getCustomer() + ", your gallery for photoshoot at " + booking.getAddress() + " and " + booking.getDate() + " is ready.\n\n\n");
   }
   
 }

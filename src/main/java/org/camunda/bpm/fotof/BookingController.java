@@ -12,7 +12,7 @@ import java.io.Serializable;
 
 @Named
 @ConversationScoped
-public class PhotoshootController implements Serializable {
+public class BookingController implements Serializable {
 
   private static  final long serialVersionUID = 1L;
 

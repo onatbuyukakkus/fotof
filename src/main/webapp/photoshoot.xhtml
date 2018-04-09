@@ -17,13 +17,13 @@
   </h:head>
   <h:body>
     <h1>Booking:</h1>
-    <p>Customer: #{photoshootController.bookingEntity.customer}</p>
-    <p>Address: #{photoshootController.bookingEntity.address}</p>
-    <p>Date: #{photoshootController.bookingEntity.date}</p>
+    <p>Customer: #{bookingController.bookingEntity.customer}</p>
+    <p>Address: #{bookingController.bookingEntity.address}</p>
+    <p>Date: #{bookingController.bookingEntity.date}</p>
     <h:form id="submitForm">
       <h:outputLabel>Photosoot Done?</h:outputLabel>
-      <h:selectBooleanCheckbox value="#{photoshootController.bookingEntity.photoshootDone}"/><br/>
-      <h:commandButton id="submit_button" value="Photoshoot Done" action="#{photoshootController.submitForm()}" />
+      <h:selectBooleanCheckbox value="#{bookingController.bookingEntity.photoshootDone}"/><br/>
+      <h:commandButton id="submit_button" value="Photoshoot Done" action="#{bookingController.submitForm()}" />
     </h:form>
   </h:body>
   </f:view>
